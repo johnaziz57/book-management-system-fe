@@ -1,22 +1,35 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-
+  <div>
     <div class="mb-3">
       <label for="" class="from-label"> Page Title </label>
-      <input type="text" class="form-control" v-model="page.pageTitle" />
+      <input type="text" class="form-control" v-model="searchTerm" />
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <book-item
+          v-for="(book, index) in books"
+          :key="index"
+          class="col-md-4"
+          :book-id="book.id"
+        />
+      </div>
     </div>
   </div>
 </template>
 
-<script lang="ts">
-import { Options, Vue } from 'vue-class-component'
-import HelloWorld from '@/components/HelloWorld.vue' // @ is an alias to /src
+<script lang="ts" setup>
+import BookItem from '@/components/BookItem.vue'
+import { BookStore } from '@/store/data'
+import { inject, watch, ref } from 'vue'
 
-@Options({
-  components: {
-    HelloWorld,
-  },
+const $books = inject('$books') as BookStore
+
+let searchTerm = ref('')
+let books = $books.getBooks()
+
+watch(searchTerm, (newSearchTerm: string, _: string) => {
+  console.log(newSearchTerm)
 })
-export default class HomeView extends Vue {}
 </script>
+<style lang="css" scoped></style>
