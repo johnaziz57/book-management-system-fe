@@ -7,7 +7,7 @@
       width="200"
     />
     <h3>{{ book.title }}</h3>
-    <h4>{{ book.isbn }}</h4>
+    <h4>{{ book.ISBN }}</h4>
   </div>
 </template>
 <script setup>

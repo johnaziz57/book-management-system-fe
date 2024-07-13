@@ -210,13 +210,6 @@
     "coverUrl": "https://example.com/the-metamorphosis.jpg"
   },
   {
-    "id": 31,
-    "title": "Invisible Man",
-    "authors": ["Ralph Ellison"],
-    "ISBN": "9780679732761",
-    "coverUrl": "https://example.com/invisible-man.jpg"
-  },
-  {
     "id": 32,
     "title": "Beloved",
     "authors": ["Toni Morrison"],
@@ -343,13 +336,6 @@
     "coverUrl": "https://example.com/the-sound-and-the-fury.jpg"
   },
   {
-    "id": 50,
-    "title": "Catch-22",
-    "authors": ["Joseph Heller"],
-    "ISBN": "9781451626650",
-    "coverUrl": "https://example.com/catch-22.jpg"
-  },
-  {
     "id": 51,
     "title": "One Flew Over the Cuckoo's Nest",
     "authors": ["Ken Kesey"],
@@ -383,13 +369,6 @@
     "authors": ["Virginia Woolf"],
     "ISBN": "9780156907392",
     "coverUrl": "https://example.com/to-the-lighthouse.jpg"
-  },
-  {
-    "id": 56,
-    "title": "The Catcher in the Rye",
-    "authors": ["J.D. Salinger"],
-    "ISBN": "9780316769488",
-    "coverUrl": "https://example.com/the-catcher-in-the-rye.jpg"
   },
   {
     "id": 57,
@@ -427,13 +406,6 @@
     "coverUrl": "https://example.com/a-clockwork-orange.jpg"
   },
   {
-    "id": 62,
-    "title": "The Grapes of Wrath",
-    "authors": ["John Steinbeck"],
-    "ISBN": "9780143039433",
-    "coverUrl": "https://example.com/the-grapes-of-wrath.jpg"
-  },
-  {
     "id": 63,
     "title": "Madame Bovary",
     "authors": ["Gustave Flaubert"],
@@ -446,13 +418,6 @@
     "authors": ["Fyodor Dostoevsky"],
     "ISBN": "9780140447927",
     "coverUrl": "https://example.com/the-idiot.jpg"
-  },
-  {
-    "id": 65,
-    "title": "The Catcher in the Rye",
-    "authors": ["J.D. Salinger"],
-    "ISBN": "9780316769488",
-    "coverUrl": "https://example.com/the-catcher-in-the-rye.jpg"
   },
   {
     "id": 66,
@@ -483,217 +448,7 @@
     "coverUrl": "https://example.com/the-adventures-of-tom-sawyer.jpg"
   },
   {
-    "id": 70,
-    "title": "The Stranger",
-    "authors": ["Albert Camus"],
-    "ISBN": "9780679720201",
-    "coverUrl": "https://example.com/the-stranger.jpg"
-  },
-  {
-    "id": 71,
-    "title": "Moby Dick",
-    "authors": ["Herman Melville"],
-    "ISBN": "9781503280786",
-    "coverUrl": "https://example.com/moby-dick.jpg"
-  },
-  {
-    "id": 72,
-    "title": "The Old Man and the Sea",
-    "authors": ["Ernest Hemingway"],
-    "ISBN": "9780684801223",
-    "coverUrl": "https://example.com/the-old-man-and-the-sea.jpg"
-  },
-  {
-    "id": 73,
-    "title": "The Grapes of Wrath",
-    "authors": ["John Steinbeck"],
-    "ISBN": "9780143039433",
-    "coverUrl": "https://example.com/the-grapes-of-wrath.jpg"
-  },
-  {
-    "id": 74,
-    "title": "The Brothers Karamazov",
-    "authors": ["Fyodor Dostoevsky"],
-    "ISBN": "9780374528379",
-    "coverUrl": "https://example.com/the-brothers-karamazov.jpg"
-  },
-  {
-    "id": 75,
-    "title": "The Road",
-    "authors": ["Cormac McCarthy"],
-    "ISBN": "9780307387899",
-    "coverUrl": "https://example.com/the-road.jpg"
-  },
-  {
-    "id": 76,
-    "title": "Brave New World",
-    "authors": ["Aldous Huxley"],
-    "ISBN": "9780060850524",
-    "coverUrl": "https://example.com/brave-new-world.jpg"
-  },
-  {
-    "id": 77,
-    "title": "The Sun Also Rises",
-    "authors": ["Ernest Hemingway"],
-    "ISBN": "9780743297332",
-    "coverUrl": "https://example.com/the-sun-also-rises.jpg"
-  },
-  {
-    "id": 78,
-    "title": "1984",
-    "authors": ["George Orwell"],
-    "ISBN": "9780451524935",
-    "coverUrl": "https://example.com/1984.jpg"
-  },
-  {
-    "id": 79,
-    "title": "Heart of Darkness",
-    "authors": ["Joseph Conrad"],
-    "ISBN": "9780141441672",
-    "coverUrl": "https://example.com/heart-of-darkness.jpg"
-  },
-  {
-    "id": 80,
-    "title": "One Hundred Years of Solitude",
-    "authors": ["Gabriel Garcia Marquez"],
-    "ISBN": "9780060883287",
-    "coverUrl": "https://example.com/one-hundred-years-of-solitude.jpg"
-  },
-  {
-    "id": 81,
-    "title": "The Metamorphosis",
-    "authors": ["Franz Kafka"],
-    "ISBN": "9780553213690",
-    "coverUrl": "https://example.com/the-metamorphosis.jpg"
-  },
-  {
     "id": 82,
-    "title": "Invisible Man",
-    "authors": ["Ralph Ellison"],
-    "ISBN": "9780679732761",
-    "coverUrl": "https://example.com/invisible-man.jpg"
-  },
-  {
-    "id": 83,
-    "title": "Beloved",
-    "authors": ["Toni Morrison"],
-    "ISBN": "9781400033416",
-    "coverUrl": "https://example.com/beloved.jpg"
-  },
-  {
-    "id": 84,
-    "title": "The Sun Also Rises",
-    "authors": ["Ernest Hemingway"],
-    "ISBN": "9780743297332",
-    "coverUrl": "https://example.com/the-sun-also-rises.jpg"
-  },
-  {
-    "id": 85,
-    "title": "The Iliad",
-    "authors": [],
-    "ISBN": "9780140447941",
-    "coverUrl": "https://example.com/the-iliad.jpg"
-  },
-  {
-    "id": 86,
-    "title": "Catch-22",
-    "authors": ["Joseph Heller"],
-    "ISBN": "9781451626650",
-    "coverUrl": "https://example.com/catch-22.jpg"
-  },
-  {
-    "id": 87,
-    "title": "The Brothers Karamazov",
-    "authors": ["Fyodor Dostoevsky"],
-    "ISBN": "9780374528379",
-    "coverUrl": "https://example.com/the-brothers-karamazov.jpg"
-  },
-  {
-    "id": 88,
-    "title": "Anna Karenina",
-    "authors": ["Leo Tolstoy"],
-    "ISBN": "9780143035008",
-    "coverUrl": "https://example.com/anna-karenina.jpg"
-  },
-  {
-    "id": 89,
-    "title": "Don Quixote",
-    "authors": ["Miguel de Cervantes"],
-    "ISBN": "9780060934347",
-    "coverUrl": "https://example.com/don-quixote.jpg"
-  },
-  {
-    "id": 90,
-    "title": "The Grapes of Wrath",
-    "authors": ["John Steinbeck"],
-    "ISBN": "9780143039433",
-    "coverUrl": "https://example.com/the-grapes-of-wrath.jpg"
-  },
-  {
-    "id": 91,
-    "title": "Alice's Adventures in Wonderland",
-    "authors": ["Lewis Carroll"],
-    "ISBN": "9780141321073",
-    "coverUrl": "https://example.com/alices-adventures-in-wonderland.jpg"
-  },
-  {
-    "id": 92,
-    "title": "Frankenstein",
-    "authors": ["Mary Shelley"],
-    "ISBN": "9780143131847",
-    "coverUrl": "https://example.com/frankenstein.jpg"
-  },
-  {
-    "id": 93,
-    "title": "The Count of Monte Cristo",
-    "authors": ["Alexandre Dumas"],
-    "ISBN": "9780140449266",
-    "coverUrl": "https://example.com/the-count-of-monte-cristo.jpg"
-  },
-  {
-    "id": 94,
-    "title": "Dracula",
-    "authors": ["Bram Stoker"],
-    "ISBN": "9780141439846",
-    "coverUrl": "https://example.com/dracula.jpg"
-  },
-  {
-    "id": 95,
-    "title": "The Picture of Dorian Gray",
-    "authors": ["Oscar Wilde"],
-    "ISBN": "9780141439570",
-    "coverUrl": "https://example.com/the-picture-of-dorian-gray.jpg"
-  },
-  {
-    "id": 96,
-    "title": "Sense and Sensibility",
-    "authors": ["Jane Austen"],
-    "ISBN": "9780141439662",
-    "coverUrl": "https://example.com/sense-and-sensibility.jpg"
-  },
-  {
-    "id": 97,
-    "title": "Heart of Darkness",
-    "authors": ["Joseph Conrad"],
-    "ISBN": "9780141441672",
-    "coverUrl": "https://example.com/heart-of-darkness.jpg"
-  },
-  {
-    "id": 98,
-    "title": "One Hundred Years of Solitude",
-    "authors": ["Gabriel Garcia Marquez"],
-    "ISBN": "9780060883287",
-    "coverUrl": "https://example.com/one-hundred-years-of-solitude.jpg"
-  },
-  {
-    "id": 99,
-    "title": "The Metamorphosis",
-    "authors": ["Franz Kafka"],
-    "ISBN": "9780553213690",
-    "coverUrl": "https://example.com/the-metamorphosis.jpg"
-  },
-  {
-    "id": 100,
     "title": "Invisible Man",
     "authors": ["Ralph Ellison"],
     "ISBN": "9780679732761",
