@@ -6,6 +6,8 @@ export interface BookStore {
   getBookById(id: number): Book | undefined
 
   getBookByTitle(searchTerm: string): Book[]
+
+  createBook(book: Book): void
 }
 
 const getBooks = async (): Promise<Book[]> => {
@@ -14,7 +16,6 @@ const getBooks = async (): Promise<Book[]> => {
 }
 
 const bookStore = await getBooks()
-console.log(bookStore)
 
 export default {
   getBooks(): Book[] {
@@ -28,4 +29,7 @@ export default {
       book.title.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())
     )
   },
+  createBook(book: Book): void {
+    bookStore.push(book);
+  }
 } as BookStore
