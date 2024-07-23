@@ -1,32 +1,37 @@
-<template lang="">
-  <form action="" class="container mb3">
+<template>
+  <form action="" class="m-5">
     <h1>Create a book</h1>
 
-    <div class="col-md-8">
-      <div class="mb-3">
-        <label for="" class="from-label">Title</label>
-        <input type="text" class="form-control" v-model="title" />
-      </div>
-      <div class="mb-3">
-        <label for="" class="form-label">Author</label>
-        <input type="text" class="form-control" v-model="author" />
-      </div>
-      <div class="mb-3">
-        <label for="" class="form-label">ISBN</label>
-        <input type="text" class="form-control" v-model="isbn" />
-      </div>
-      <div class="mb-3">
-        <label for="" class="from-label">Description</label>
-        <textarea
-          type="text"
-          class="form-control"
-          rows="5"
-          v-model="description"
-        ></textarea>
-      </div>
+    <div class="inputWithLabel">
+      <label for="" class="label">Title</label>
+      <input type="text" class="form-control" v-model="title" />
     </div>
-    <div class="col"></div>
-    <div class="mb-3">
+    <div class="inputWithLabel">
+      <label for="" class="label">Author</label>
+      <input type="text" class="form-control" v-model="author" />
+    </div>
+    <div class="inputWithLabel" >
+      <label for="" class="label">ISBN</label>
+      <input type="text" class="form-control" v-model="isbn" />
+    </div>
+    <div class="inputWithLabel">
+      <label for="" class="label">Description</label>
+      <textarea
+        type="text"
+        class="form-control"
+        rows="5"
+        v-model="description"
+      ></textarea>
+    </div>
+    <div class="inputWithLabel">
+      <label for="exampleFormControlFile1">Example file input</label>
+      <input
+        type="file"
+        class="form-control-file"
+        id="exampleFormControlFile1"
+      />
+    </div>
+    <div class="d-flex justify-content-center">
       <button
         class="btn btn-primary"
         @click.prevent="submitForm"
@@ -39,6 +44,8 @@
 </template>
 <script setup lang="ts">
 import { ref, inject, computed } from 'vue'
+import { BookStore } from '@/store/data';
+import { Book } from '@/models/Book';
 
 const $books = inject('$books') as BookStore
 
@@ -49,6 +56,7 @@ let isbn = ref('')
 
 function submitForm() {
   const book: Book = {
+    id: undefined,
     title: title.value,
     authors: [author.value],
     isbn: isbn.value,
@@ -62,4 +70,24 @@ const isFormInvalid = computed(() => {
   return !title.value || !author.value || !isbn.value
 })
 </script>
-<style lang=""></style>
+<style lang="css" scoped>
+.inputWithLabel {
+  margin-inline-start: 16vw;
+  margin-inline-end: 16vw;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  align-self: self-start;
+}
+
+.container {
+  display: flex;
+  align-content: center;
+  flex-direction: row;
+}
+
+</style>
