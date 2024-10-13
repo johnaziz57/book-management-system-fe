@@ -4,14 +4,16 @@ import router from './router'
 import store from './store'
 import $books from './store/data'
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
+import axios from './plugins/axios'
 
 
 const app = createApp(App)
 
 app.use(store)
 app.use(router)
-app.config.globalProperties.$books=$books
-
+app.use(axios, {
+    baseUrl:""
+})
 app.provide('$books', $books)
 
 app.mount('#app')

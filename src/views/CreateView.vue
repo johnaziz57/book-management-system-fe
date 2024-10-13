@@ -25,12 +25,9 @@
     </div>
     <div class="inputWithLabel">
       <label for="exampleFormControlFile1">Example file input</label>
-      <input
-        type="file"
-        class="form-control-file"
-        id="exampleFormControlFile1"
-      />
+      <drop-file></drop-file>
     </div>
+
     <div class="d-flex justify-content-center">
       <button
         class="btn btn-primary"
@@ -46,6 +43,7 @@
 import { ref, inject, computed } from 'vue'
 import { BookStore } from '@/store/data';
 import { Book } from '@/models/Book';
+import DropFile from '@/components/DropFile.vue';
 
 const $books = inject('$books') as BookStore
 

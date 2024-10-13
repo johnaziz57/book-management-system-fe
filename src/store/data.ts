@@ -1,4 +1,5 @@
 import { Book } from '@/models/Book'
+import axios from 'axios'
 
 export interface BookStore {
   getBooks(): Book[]
