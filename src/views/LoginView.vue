@@ -36,7 +36,7 @@
 import { ref } from 'vue'
 let email = ref('')
 let password = ref('')
-
+// TODO handle closing the modal
 const closeModal =() => {
   console.log("emit close");
   
