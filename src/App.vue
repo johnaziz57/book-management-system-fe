@@ -1,11 +1,33 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link>
-    <router-link to="/create">Create</router-link>
-    <router-link to="/about">About</router-link>
-  </nav>
+  <div class="navbar">
+    <nav>
+      <router-link to="/">Home</router-link>
+      <router-link to="/create">Create</router-link>
+      <router-link to="/about">About</router-link>
+    </nav>
+    <button class="btn btn-primary mx-3" @click.prevent="showModal">
+      Log in
+    </button>
+  </div>
+  <login-view v-show="isModalVisible" @close="closeModal"/>
   <router-view />
 </template>
+
+<script setup>
+import { ref } from 'vue'
+import LoginView from '@/views/LoginView.vue'
+
+let isModalVisible = ref(false)
+const showModal = () => {
+  console.log('SHOW MODAL')
+  isModalVisible.value = true
+}
+
+const closeModal = () => {
+  console.log('SHOW MODAL')
+  isModalVisible.value = false
+}
+</script>
 
 <style>
 #app {
@@ -16,13 +38,18 @@
   color: #2c3e50;
 }
 
+.navbar {
+  background-color: #333;
+}
+
 nav {
   padding: 30px;
-  background-color: #333;
+
   padding: 1rem;
-	display: flex;
-	justify-content: center;
-	align-content: center;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-content: center;
 }
 
 nav a {
@@ -37,6 +64,7 @@ nav a {
 nav a:hover {
   text-decoration: underline;
 }
+
 nav a.router-link-exact-active {
   color: #42b983;
 }
