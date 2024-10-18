@@ -9,13 +9,14 @@
       Log in
     </button>
   </div>
-  <login-view v-show="isModalVisible" @close="closeModal"/>
+  <login-view v-show="isModalVisible" :onClose="closeModal"/>
   <router-view />
 </template>
 
 <script setup>
 import { ref } from 'vue'
 import LoginView from '@/views/LoginView.vue'
+
 
 let isModalVisible = ref(false)
 const showModal = () => {

@@ -6,6 +6,7 @@
     id="simpleModal"
     tabindex="-1"
     aria-labelledby="modalLabel"
+    @click.prevent="closeModal"
   >
     <div class="modal-dialog">
       <div class="modal-content">
@@ -33,15 +34,16 @@
   <!-- </div> -->
 </template>
 <script setup>
-import { ref } from 'vue'
-let email = ref('')
-let password = ref('')
-// TODO handle closing the modal
+import { defineProps } from 'vue'
+
+const { onClose } = defineProps({onClose: Function})
+
 const closeModal =() => {
   console.log("emit close");
   
-  this.$emit('close')
+  onClose()
 }
+
 </script>
 <style>
 .modal-content {
