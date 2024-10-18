@@ -2,8 +2,8 @@
   <!-- <div class="modal-backdrop"> -->
     <div
     class="modal"
-    style="background-color: chartreuse; display: flex;"
-    id="simpleModal"
+    id="loginModal" 
+    style="display: flex; background-color: #2125297B;"
     tabindex="-1"
     aria-labelledby="modalLabel"
     @click.prevent="closeModal"
