@@ -21,15 +21,26 @@
           ></button>
         </div>
         <div class="modal-body">
-          <p>This is a simple modal built with Bootstrap and Vue 3.</p>
+          <h3>Login</h3>
           <div class="inputWithLabel">
-            <label for="" class="label">Title</label>
+            <label for="" class="label">Username </label>
             <input type="text" class="form-control" v-model="title" />
+          </div>
+          <div class="inputWithLabel">
+            <label for="" class="label">Password</label>
+            <input type="password" class="form-control" v-model="title" />
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" @click.prevent="closeModal">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            @click.prevent="closeModal"
+          >
             Close
+          </button>
+          <button type="button" class="btn btn-primary" @click.prevent="login">
+            Login
           </button>
         </div>
       </div>
@@ -38,7 +49,9 @@
   <!-- </div> -->
 </template>
 <script setup>
-import { defineProps } from 'vue'
+import { defineProps, inject } from 'vue'
+
+const axios = inject('$axios')
 
 const { onClose } = defineProps({ onClose: Function })
 
@@ -48,6 +61,21 @@ const closeModal = () => {
   onClose()
 }
 
+const login = () => {
+  axios
+    .post('/auth/login', {
+      username: 'admin',
+      password: 'password',
+    })
+    .then((response) => {
+      console.log('Success')
+      console.log(JSON.stringfy(response))
+    })
+    .catch((e) => {
+      console.log('Error')
+      console.log(e)
+    })
+}
 </script>
 <style>
 .modal-content {

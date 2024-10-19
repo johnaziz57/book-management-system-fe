@@ -12,7 +12,7 @@ const app = createApp(App)
 app.use(store)
 app.use(router)
 app.use(axios, {
-    baseUrl:""
+    baseUrl:"http://localhost:8080"
 })
 app.provide('$books', $books)
 
