@@ -48,28 +48,33 @@
   </div>
   <!-- </div> -->
 </template>
-<script setup>
-import { defineProps, inject } from 'vue'
+<script setup lang="ts">
+import { TOKEN_KEY } from '@/common/Constants';
+import { LoginResponse } from '@/models/LoginResponse';
+import { AxiosKey } from '@/plugins/axios';
+import { AxiosResponse } from 'axios';
+import { defineProps, inject, ref } from 'vue'
 
-const axios = inject('$axios')
-
+const axios = inject(AxiosKey)
 const { onClose } = defineProps({ onClose: Function })
+
+let isLoggedIn = ref(false)
 
 const closeModal = () => {
   console.log('closeModal')
-
-  onClose()
+  onClose && onClose()
 }
 
 const login = () => {
-  axios
-    .post('/auth/login', {
+  axios?.post<LoginResponse>('/auth/login', {
       username: 'admin',
       password: 'password',
     })
-    .then((response) => {
+    .then((response: AxiosResponse) => {
       console.log('Success')
-      console.log(JSON.stringfy(response))
+      console.log(JSON.stringify(response.data.token))
+      localStorage.setItem(TOKEN_KEY, response.data.token)
+      isLoggedIn.value = true
     })
     .catch((e) => {
       console.log('Error')
