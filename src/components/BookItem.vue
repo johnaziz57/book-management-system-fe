@@ -11,12 +11,12 @@
   </div>
 </template>
 <script setup>
-import { inject } from 'vue'
+import { useBookStore } from '@/store/data';
 
-const books = inject('$books')
+const bookStore = useBookStore()
 
 const { bookId } = defineProps(['book-id'])
-const book = books.getBookById(bookId)
+const book = bookStore.getBookById(bookId)
 
 function setPlaceholder(event) {
   event.target.src = require('@/assets/book-placeholder.png')

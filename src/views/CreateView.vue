@@ -40,12 +40,11 @@
   </form>
 </template>
 <script setup lang="ts">
-import { ref, inject, computed } from 'vue'
-import { BookStore } from '@/store/data';
+import { ref, computed } from 'vue'
 import { Book } from '@/models/Book';
 import DropFile from '@/components/DropFile.vue';
 
-const $books = inject('$books') as BookStore
+
 
 let title = ref('')
 let description = ref('')
@@ -61,7 +60,6 @@ function submitForm() {
     coverUrl: '',
   }
   console.log(book)
-  //$books.createBook(book)
 }
 
 const isFormInvalid = computed(() => {

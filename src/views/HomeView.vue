@@ -20,21 +20,29 @@
 
 <script lang="ts" setup>
 import BookItem from '@/components/BookItem.vue'
-import { BookStore } from '@/store/data'
-import { inject, watch, ref } from 'vue'
+import { Book } from '@/models/Book';
+import { useBookStore } from '@/store/data'
+import { watch, ref } from 'vue'
 
-const $books = inject('$books') as BookStore
+const bookStore = useBookStore()
+bookStore.fetchBooks()
 
 let searchTerm = ref('')
-let books = $books.getBooks()
+let books = ref<Book[]>([])
+
+bookStore.$subscribe((mutations, state) => {
+  books.value= state.books
+})
+
+
 
 watch(searchTerm, (newSearchTerm: string, _: string) => {
   if (newSearchTerm) {
-    const response = $books.getBookByTitle(newSearchTerm)
+    const response = bookStore.getBookByTitle(newSearchTerm)
     console.log(JSON.stringify(response))
-    books = response
+    books.value = response
   } else {
-    books = $books.getBooks()
+    books.value = bookStore.books
   }
 })
 </script>
