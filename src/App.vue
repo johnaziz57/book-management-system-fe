@@ -5,29 +5,15 @@
       <router-link to="/create">Create</router-link>
       <router-link to="/about">About</router-link>
     </nav>
-    <button class="btn btn-primary mx-3" @click.prevent="showModal">
-      Log in
-    </button>
+    <login-button/>
   </div>
-  <login-view v-show="isModalVisible" :onClose="closeModal"/>
+  
   <router-view />
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import LoginView from '@/views/LoginView.vue'
+import LoginButton from './components/LoginButton.vue';
 
-
-let isModalVisible = ref(false)
-const showModal = () => {
-  console.log('SHOW MODAL')
-  isModalVisible.value = true
-}
-
-const closeModal = () => {
-  console.log('SHOW MODAL')
-  isModalVisible.value = false
-}
 </script>
 
 <style>
